@@ -7,23 +7,23 @@ const Education = () => {
     const education = [
         {
             degree: "B.E. (Electronics and Communication Engineering)",
-            school: "BLDEA's College of Engineering and Technology, Bijapur",
+            school: "Quaid Azam's College of Engineering",
             year: "2018",
-            score: "",
+            score: "2.8 CGPA",
             details: "Specialized in Electronics and Communication."
         },
         {
-            degree: "PUC (Higher Secondary Education)",
-            school: "SNJPNM'S PU Science College, Nidasoshi",
+            degree: "Concordia (Private Education)",
+            school: "Nowshera'S PU Science College",
             year: "2022",
-            score: "",
-            details: "Focus on Science curriculum."
+            score: "85%",
+            details: "Focus on Science Computer."
         },
         {
             degree: "SSLC (Secondary Education)",
-            school: "Rani Channamma High School, Hukkeri",
+            school: "High School, Swabi",
             year: "2025",
-            score: "",
+            score: "71  %",
             details: "High academic performance."
         }
     ];

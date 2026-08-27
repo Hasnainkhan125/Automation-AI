@@ -2,12 +2,13 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import {
-    Briefcase, Code2, Download, ExternalLink, FolderGit2,
+    Briefcase, Download, ExternalLink, FolderGit2,
     GraduationCap, Github, Home, Linkedin, Mail, Menu,
     Package, Send, Sparkles, User, X
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
+import Image from 'next/image';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -54,26 +55,31 @@ const Header = () => {
                 }`}
         >
             <div className="container mx-auto flex items-center justify-between px-4 md:px-8">
-                {/* Logo */}
+                {/* Logo with Image - White Filter */}
                 <motion.div
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="group flex cursor-pointer items-center gap-2.5"
+                    className="group flex cursor-pointer items-center"
                     onClick={() => window.scrollTo(0, 0)}
                     role="link"
                     aria-label="Go to top of page"
                 >
-                    <div className="relative">
-                        <div className="absolute inset-0 rounded-full bg-[#FFB020]/20 blur-xl" />
-                        <Code2 className="relative h-8 w-8 text-[#FFB020] transition-transform duration-300 group-hover:rotate-12" />
+                    <div className="relative h-12 w-20 rounded-full overflow-hidden ">
+                        <Image
+                            src="/logo1.png"
+                            alt="hasnainDev Logo"
+                            fill
+                            className="object-cover brightness-0 invert"
+                            priority
+                        />
                     </div>
-                    <span className="text-xl font-bold tracking-tight text-white">
+                    <span className="text-[12px] font-bold tracking-tight text-white">
                         hasnain<span className="text-[#FFB020]">Devs</span>
-                        <span className="text-[#FFB020]">.</span>
+                    <p className="text-[10px] text-slate-500">Full Stack Developer</p>
                     </span>
                 </motion.div>
 
-                {/* Desktop Nav */}
+                {/* Desktop Nav - Active Link Background Color */}
                 <nav className="hidden gap-1 md:flex" aria-label="Main navigation">
                     {navLinks.map((link) => (
                         <Link
@@ -84,7 +90,7 @@ const Header = () => {
                             spy={true}
                             offset={-100}
                             className="group relative cursor-pointer rounded-xl px-4 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-[#FFB020]/10 hover:text-[#FFB020]"
-                            activeClass="text-[#FFB020] bg-[#FFB020]/10"
+                            activeClass="bg-[#FFB020]/20 text-[#FFB020]"
                         >
                             {link.name}
                             <span className="absolute bottom-1 left-1/2 h-0.5 w-0 bg-[#FFB020] transition-all duration-300 group-hover:left-0 group-hover:w-full" />
@@ -159,23 +165,25 @@ const Header = () => {
                             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
                             className="fixed right-0 top-0 z-40 flex h-full w-[85%] max-w-sm flex-col overflow-y-auto border-l border-slate-800 bg-[#0B0D12] px-6 pt-24 shadow-2xl shadow-black/70 md:hidden"
                         >
-                            {/* Profile Section */}
-                            <div className="mb-6 flex items-center gap-4 border-b border-slate-800 pb-6">
-                                <div className="relative">
-                                    <div className="h-14 w-14 rounded-full bg-gradient-to-br from-[#FFB020] to-[#6EE7B7] p-[2px]">
-                                        <div className="flex h-full w-full items-center justify-center rounded-full bg-[#0B0D12]">
-                                            <span className="text-xl font-bold text-[#FFB020]">HH</span>
-                                        </div>
-                                    </div>
-                                    <div className="absolute -bottom-0.5 -right-0.5 h-4 w-4 rounded-full border-2 border-[#0B0D12] bg-[#6EE7B7]" />
+                            {/* Profile Section - White Filter */}
+                            <div className="mb-6 flex items-center gap-1 border-b border-slate-800 pb-6">
+                                <div className="relative h-16 w-26 rounded-full overflow-hidden">
+                                    <Image
+                                        src="/logo1.png"
+                                        alt="hasnainDev Logo"
+                                        fill
+                                        className="object-cover brightness-0 invert"
+                                    />
                                 </div>
                                 <div>
-                                    <p className="text-sm font-semibold text-white">Hasnain Hamid</p>
-                                    <p className="text-xs text-slate-400">Software Engineer II</p>
-                                </div>
+  <span className="text-1xl font-bold tracking-tight text-white">
+                        hasnain<span className="text-[#FFB020]">Devs</span>
+                        <span className="text-[#FFB020]">.</span>
+                    </span>
+                                                    </div>
                             </div>
 
-                            {/* Navigation Links */}
+                            {/* Navigation Links - Active Background Color */}
                             <nav className="flex-1 space-y-1">
                                 {navLinks.map((link, i) => {
                                     const Icon = link.icon;
@@ -193,7 +201,7 @@ const Header = () => {
                                                 spy={true}
                                                 offset={-100}
                                                 className="group flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium text-slate-400 transition-all duration-300 hover:bg-[#FFB020]/10 hover:text-[#FFB020]"
-                                                activeClass="text-[#FFB020] bg-[#FFB020]/10"
+                                                activeClass="bg-[#FFB020]/15 text-[#FFB020]"
                                                 onClick={() => setIsOpen(false)}
                                             >
                                                 <Icon className="h-5 w-5" />

@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { ExternalLink, Tag, X, Globe, ArrowUpRight, Sparkles } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface Project {
     title: string;
@@ -12,6 +13,7 @@ interface Project {
     tags: string[];
     links?: { label: string; url: string; icon?: React.ReactNode }[];
     gradient?: string;
+    image?: string;
 }
 
 const Projects = () => {
@@ -30,7 +32,8 @@ const Projects = () => {
                 "Integrated frontend modules with backend REST APIs."
             ],
             tags: ["React", "Material UI", "IIoT", "Enterprise"],
-            gradient: "from-blue-900/20 to-cyan-900/20"
+            gradient: "from-blue-900/20 to-cyan-900/20",
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2Vic2l0ZXN8ZW58MHx8MHx8fDA%3D"
         },
         {
             title: "Stock Automation Platform",
@@ -42,7 +45,8 @@ const Projects = () => {
                 "Built and integrated frontend components with backend REST APIs."
             ],
             tags: ["MERN Stack", "Cron Jobs", "Real-time"],
-            gradient: "from-green-900/20 to-emerald-900/20"
+            gradient: "from-green-900/20 to-emerald-900/20",
+            image: "https://images.unsplash.com/photo-1642132652860-603f4e3c19b7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdlYnNpdGVzJTIwZGVzaW5nfGVufDB8fDB8fHww"
         },
         {
             title: "IIoT Monitoring Dashboard",
@@ -55,7 +59,8 @@ const Projects = () => {
                 "Developed Shift Management and Production Planning modules."
             ],
             tags: ["Vue.js", "Node.js", "Charts", "Analytics"],
-            gradient: "from-purple-900/20 to-pink-900/20"
+            gradient: "from-purple-900/20 to-pink-900/20",
+            image: "https://images.unsplash.com/photo-1648134859175-78b41b4db186?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdlYnNpdGVzJTIwZGVzaW5nfGVufDB8fDB8fHww"
         },
         {
             title: "QR Layout Designer & Libraries",
@@ -68,6 +73,7 @@ const Projects = () => {
             ],
             tags: ["Open Source", "NPM", "React", "TypeScript"],
             gradient: "from-orange-900/20 to-amber-900/20",
+            image: "https://images.unsplash.com/photo-1648134859186-a05fb609f41e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdlYnNpdGVzJTIwZGVzaW5nfGVufDB8fDB8fHww",
             links: [
                 { label: "qrlayout-core", url: "https://www.npmjs.com/package/qrlayout-core" },
                 { label: "qrlayout-ui", url: "https://www.npmjs.com/package/qrlayout-ui" },
@@ -84,7 +90,8 @@ const Projects = () => {
                 "Optimized for performance and mobile devices."
             ],
             tags: ["React.js", "Bootstrap", "JavaScript"],
-            gradient: "from-red-900/20 to-rose-900/20"
+            gradient: "from-red-900/20 to-rose-900/20",
+            image: "https://images.unsplash.com/photo-1634084462412-b54873c0a56d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2Vic2l0ZXMlMjBkZXNpbmd8ZW58MHx8MHx8fDA%3D"
         },
         {
             title: "HR Management System (HRMS)",
@@ -96,7 +103,8 @@ const Projects = () => {
                 "Implemented secure authentication and role-based access."
             ],
             tags: ["React.js", "Bootstrap", "Node.js", "Express", "MongoDB"],
-            gradient: "from-indigo-900/20 to-violet-900/20"
+            gradient: "from-indigo-900/20 to-violet-900/20",
+            image: "https://images.unsplash.com/photo-1760008486593-a85315610136?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdlYnNpdGVzJTIwZGVzaW5nfGVufDB8fDB8fHww"
         },
     ];
 
@@ -137,15 +145,29 @@ const Projects = () => {
                             className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-black/10 transition-all duration-300 hover:border-[#FFB020]/40 hover:shadow-2xl hover:shadow-[#FFB020]/5"
                         >
                             <div className="relative z-10 flex flex-col h-full">
-                                {/* Header */}
-                                <div className="relative h-48 overflow-hidden bg-black/30 p-6 flex items-center justify-center">
-                                    <div className="text-center">
+                                {/* Header with Image */}
+                                <div className="relative h-48 overflow-hidden bg-black/30">
+                                    {project.image ? (
+                                        <div className="relative w-full h-full">
+                                            <Image
+                                                src={project.image}
+                                                alt={project.title}
+                                                fill
+                                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                                unoptimized
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D12] via-[#0B0D12]/60 to-transparent" />
+                                        </div>
+                                    ) : (
+                                        <div className="w-full h-full bg-gradient-to-br from-slate-900 to-slate-950" />
+                                    )}
+                                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
                                         <div className="mb-3 flex items-center justify-center gap-2">
-                                            <span className="rounded-full bg-[#FFB020]/10 px-3 py-1 text-xs font-medium text-[#FFB020]">
+                                            <span className="rounded-full bg-[#FFB020]/20 backdrop-blur-sm px-3 py-1 text-xs font-medium text-[#FFB020] border border-[#FFB020]/30">
                                                 {project.role}
                                             </span>
                                         </div>
-                                        <h3 className="text-xl font-bold text-white group-hover:text-[#FFB020] transition-colors duration-300">
+                                        <h3 className="text-xl font-bold text-white group-hover:text-[#FFB020] transition-colors duration-300 text-center drop-shadow-lg">
                                             {project.title}
                                         </h3>
                                     </div>
@@ -216,10 +238,24 @@ const Projects = () => {
                             transition={{ type: "spring", damping: 25, stiffness: 300 }}
                             className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-slate-700 bg-[#0E1015] p-6 shadow-2xl shadow-black/70 md:p-8 scrollbar-thin scrollbar-thumb-slate-700"
                         >
+                            {/* Image at top of modal */}
+                            {selectedProject.image && (
+                                <div className="relative w-full h-48 mb-6 rounded-xl overflow-hidden">
+                                    <Image
+                                        src={selectedProject.image}
+                                        alt={selectedProject.title}
+                                        fill
+                                        className="object-cover"
+                                        unoptimized
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0E1015] to-transparent" />
+                                </div>
+                            )}
+
                             {/* Close Button */}
                             <button
                                 onClick={() => setSelectedProject(null)}
-                                className="absolute right-4 top-4 rounded-full bg-slate-800/80 p-2 transition-colors hover:bg-slate-700 hover:scale-110 active:scale-95"
+                                className="absolute right-4 top-4 rounded-full bg-slate-800/80 p-2 transition-colors hover:bg-slate-700 hover:scale-110 active:scale-95 z-10"
                             >
                                 <X className="h-5 w-5 text-slate-400" />
                             </button>

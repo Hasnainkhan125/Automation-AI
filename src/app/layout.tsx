@@ -10,20 +10,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shashidhar-portfolio.netlify.app"),
+  metadataBase: new URL("https://hasnaindev-portfolio.netlify.app"),
   referrer: 'origin-when-cross-origin',
 
   title: {
-    default: "Shashidhar Naik | Full Stack Developer — React, Node.js, Next.js",
-    template: "%s | Shashidhar Naik",
+    default: "hasnainDev | Full Stack Developer — React, Node.js, Next.js",
+    template: "%s | hasnainDev",
   },
   description:
-    "Portfolio of Shashidhar Naik — Software Engineer II with 4+ years building scalable enterprise web apps. Expert in React, Next.js, Node.js, TypeScript, and MERN/MEVN stack. Open source contributor.",
+    "Portfolio of hasnainDev — Software Engineer II with 4+ years building scalable enterprise web apps. Expert in React, Next.js, Node.js, TypeScript, and MERN/MEVN stack. Open source contributor.",
 
   keywords: [
-    "Shashidhar Naik",
-    "Shashidhar Naik Portfolio",
-    "shashidhar developer",
+    "hasnainDev",
+    "hasnainDev Portfolio",
+    "hasnain developer",
     "Software Engineer II",
     "Full Stack Developer",
     "Full Stack Developer Portfolio",
@@ -50,11 +50,11 @@ export const metadata: Metadata = {
     "Software Engineer Portfolio India",
   ],
 
-  authors: [{ name: "Shashidhar Naik", url: "https://shashidhar-portfolio.netlify.app" }],
-  creator: "Shashidhar Naik",
-  publisher: "Shashidhar Naik",
+  authors: [{ name: "hasnainDev", url: "https://hasnaindev-portfolio.netlify.app" }],
+  creator: "hasnainDev",
+  publisher: "hasnainDev",
 
-  applicationName: "Shashidhar Naik Portfolio",
+  applicationName: "hasnainDev Portfolio",
   category: "technology",
   classification: "Software Engineer Portfolio",
 
@@ -83,18 +83,18 @@ export const metadata: Metadata = {
   // ── Open Graph ────────────────────────────────────────────────────────────
   openGraph: {
     type: "website",
-    title: "Shashidhar Naik | Full Stack Developer Portfolio",
+    title: "hasnainDev | Full Stack Developer Portfolio",
     description:
       "Software Engineer II with 4+ years of experience. React, Next.js, Node.js, TypeScript. Frontend Lead for enterprise Warehouse Management System. Open source contributor.",
-    url: "https://shashidhar-portfolio.netlify.app",
-    siteName: "Shashidhar Naik Portfolio",
+    url: "https://hasnaindev-portfolio.netlify.app",
+    siteName: "hasnainDev Portfolio",
     locale: "en_US",
     images: [
       {
         url: "/portfolio_hero_section.png",
         width: 1200,
         height: 630,
-        alt: "Shashidhar Naik — Full Stack Developer Portfolio Preview",
+        alt: "hasnainDev — Full Stack Developer Portfolio Preview",
         type: "image/png",
       },
     ],
@@ -103,13 +103,13 @@ export const metadata: Metadata = {
   // ── Twitter Card ──────────────────────────────────────────────────────────
   twitter: {
     card: "summary_large_image",
-    title: "Shashidhar Naik | Full Stack Developer — React, Node.js, Next.js",
+    title: "hasnainDev | Full Stack Developer — React, Node.js, Next.js",
     description:
       "Software Engineer II specializing in scalable enterprise web apps. Expert in MERN/MEVN stack and open source tools.",
     images: [
       {
         url: "/portfolio_hero_section.png",
-        alt: "Shashidhar Naik Portfolio Preview",
+        alt: "hasnainDev Portfolio Preview",
       },
     ],
   },
@@ -117,8 +117,10 @@ export const metadata: Metadata = {
   // ── Icons ─────────────────────────────────────────────────────────────────
   icons: {
     icon: [
+      { url: "/favicon-64.png", sizes: "64x64", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.ico", type: "image/x-icon" },
     ],
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -145,7 +147,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#0f172a" />
         <meta name="color-scheme" content="dark" />
 
-        {/* ── JSON-LD: Person Schema ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

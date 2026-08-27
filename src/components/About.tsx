@@ -129,17 +129,17 @@ const About = () => {
         {
             category: "Backend & APIs",
             icon: <Server className="w-6 h-6 text-[#FFB020]" />,
-            items: ["Node.js", "Express.js", "RESTful APIs"]
+            items: ["Node.js", "Express.js", "RESTful APIs", "GraphQL", "Python", "FastAPI", "Django"]
         },
         {
             category: "Database & Cloud",
             icon: <Database className="w-6 h-6 text-[#FFB020]" />,
-            items: ["MongoDB", "Cron Jobs", "Deployment", "DevOps Basics"]
+            items: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Cron Jobs", "Deployment", "DevOps Basics", "AWS"]
         },
         {
             category: "Tools & Concepts",
             icon: <Cpu className="w-6 h-6 text-[#FFB020]" />,
-            items: ["Git/GitHub", "Postman", "VS Code", "Performance Optimization", "Scalable Architecture"]
+            items: ["Git/GitHub", "Postman", "VS Code", "Performance Optimization", "Scalable Architecture", "Docker", "CI/CD"]
         }
     ];
 
@@ -163,7 +163,7 @@ const About = () => {
                     <h2 className="mb-6 text-3xl font-bold tracking-tight text-white md:text-4xl">The system behind the systems</h2>
                     <p className="text-lg leading-relaxed text-slate-400">
                         I&apos;m a <span className="font-semibold text-[#FFB020]">Software Engineer II</span> with 4+ years building scalable, enterprise-grade web applications.
-                        Currently I lead frontend delivery for a major <span className="text-[#FAFAFA]">Warehouse Management System (WMS)</span>.
+                        Currently I lead frontend delivery for a major <span className="text-[#6EE7B7]">Warehouse Management System (WMS)</span>.
                         My path started in technical support before moving into full-stack development — a background that keeps me focused on what actually breaks in production, not just what demos well.
                         Outside core work, I&apos;m an active open-source contributor, building tools like <span className="font-semibold text-[#FFB020]">qrlayout</span> for other developers.
                     </p>
@@ -177,7 +177,7 @@ const About = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group rounded-xl border border-slate-800 bg-black/10 p-6 backdrop-blur-sm transition-colors hover:border-[#FFB020]/40"
+                            className="group rounded-xl border border-slate-800 bg-slate-900/60 p-6 backdrop-blur-sm transition-colors hover:border-[#FFB020]/40"
                         >
                             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-slate-950/70 transition-transform group-hover:scale-110">
                                 {skill.icon}

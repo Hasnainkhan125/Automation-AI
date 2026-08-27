@@ -1,18 +1,9 @@
-# 🚀 Shashidhar Naik | Full Stack Software Engineer Portfolio
+# 🚀 hasnainDev | Full Stack Software Engineer Portfolio
 
-## 🌐 [Visit Live Portfolio →](https://shashidhar-portfolio.netlify.app/)
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Next.js](https://img.shields.io/badge/Framework-Next.js%2016-black?style=flat&logo=next.js)](https://nextjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind%20CSS%204-06B6D4?style=flat&logo=tailwindcss)](https://tailwindcss.com/)
-
-A premium, SEO-optimized portfolio website for **Hasnain_tech**, a Software Engineer II specializing in building scalable enterprise web applications with the **MERN** (MongoDB, Express, React, Node.js) and **MEVN** (Vue.js instead of React) stacks. This portfolio showcases professional experience, open-source contributions, and expertise in modern web technologies including Next.js, TypeScript, and React.
+A premium, SEO-optimized portfolio website for **hasnainDev**, a Software Engineer II specializing in building scalable enterprise web applications with the **MERN** (MongoDB, Express, React, Node.js) and **MEVN** (Vue.js instead of React) stacks. This portfolio showcases professional experience, open-source contributions, and expertise in modern web technologies including Next.js, TypeScript, and React.
 
 ---
 
-## 🎨 Preview
-
-![Shashidhar Naik Portfolio Hero Section](/public/portfolio_hero_section.png)
 
 ---
 
@@ -40,7 +31,7 @@ As a **Software Engineer II** at Cymbeline Innovation Pvt. Ltd, I lead frontend 
 
 ## 🛠️ Technology Stack
 
-| Category | technologies |
+| Category | Technologies |
 | :--- | :--- |
 | **Frameworks** | Next.js 16 (App Router), React 19 |
 | **Styling** | Tailwind CSS 4, Framer Motion (Animations) |
@@ -64,7 +55,6 @@ I actively contribute to the developer community through open-source NPM package
 
 **Total Downloads**: 6,000+ across all packages  
 
-
 ---
 
 ## 📂 Project Architecture
@@ -84,53 +74,3 @@ src/
 │   ├── Footer.tsx     # Footer section
 │   └── PortfolioAssistant.tsx # AI chatbot
 └── public/            # Static Assets (Images, Favicons, Sitemap)
-```
-
----
-
-## 🚀 Local Development
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/shashi089/portfolio.git
-   cd portfolio
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**:
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
-
----
-
-## 🌍 Deployment (Netlify)
-
-This project uses **Static Export** (`output: 'export'`) for maximum performance and SEO.
-
-1. Run `npm run build`.
-2. Deploy the `out/` directory to **Netlify** (via GitHub integration or CLI).
-
----
-
-## 🔗 Connect with Me
-
-- **LinkedIn**: [Shashidhar Naik](https://www.linkedin.com/in/shashidhar-naik-aab5b512a/)
-- **GitHub**: [@shashi089](https://github.com/shashi089)
-- **NPM**: [@shashidharlbs](https://www.npmjs.com/~shashidharlbs)
-- **Portfolio**: [shashidhar-portfolio.netlify.app](https://shashidhar-portfolio.netlify.app/)
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).

@@ -1,9 +1,28 @@
 # 🚀 hasnainDev | Full Stack Software Engineer Portfolio
 
+## 🌐 [Visit Live Portfolio →](https://hasnaindev-portfolio.netlify.app/)
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Framework-Next.js%2016-black?style=flat&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind%20CSS%204-06B6D4?style=flat&logo=tailwindcss)](https://tailwindcss.com/)
+
 A premium, SEO-optimized portfolio website for **hasnainDev**, a Software Engineer II specializing in building scalable enterprise web applications with the **MERN** (MongoDB, Express, React, Node.js) and **MEVN** (Vue.js instead of React) stacks. This portfolio showcases professional experience, open-source contributions, and expertise in modern web technologies including Next.js, TypeScript, and React.
 
 ---
 
+## 🎨 Preview
+
+### Hero Section
+![hasnainDev Portfolio Hero Section](/images/portfolio-hero.png)
+
+### Projects Section
+![Projects Section](/images/portfolio-projects.png)
+
+### Experience Timeline
+![Experience Section](/images/portfolio-experience.png)
+
+### Contact Section
+![Contact Section](/images/portfolio-contact.png)
 
 ---
 

@@ -2,8 +2,6 @@
 
 A premium, SEO-optimized portfolio website for **hasnainDev**, a Software Engineer II specializing in building scalable enterprise web applications with the **MERN** (MongoDB, Express, React, Node.js) and **MEVN** (Vue.js instead of React) stacks. This portfolio showcases professional experience, open-source contributions, and expertise in modern web technologies including Next.js, TypeScript, and React.
 
----
-
 
 ---
 
